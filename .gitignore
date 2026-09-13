@@ -35,3 +35,5 @@ logs/
 .pytest_cache/
 .coverage
 htmlcov/
+# Original downloaded archive
+data/raw/*.zip
