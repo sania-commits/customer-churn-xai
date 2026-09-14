@@ -1,0 +1,29 @@
+{
+    "model_name": "Weighted XGBoost Customer Churn Model",
+    "model_type": "XGBClassifier",
+    "selected_threshold": 0.51,
+    "scale_pos_weight": 5.3636,
+    "training_samples": 3150,
+    "features": [
+        "call_failure",
+        "complains",
+        "subscription_length",
+        "charge_amount",
+        "seconds_of_use",
+        "frequency_of_use",
+        "frequency_of_sms",
+        "distinct_called_numbers",
+        "age_group",
+        "tariff_plan",
+        "status",
+        "age",
+        "customer_value"
+    ],
+    "hyperparameters": {
+        "n_estimators": 300,
+        "max_depth": 7,
+        "learning_rate": 0.1,
+        "subsample": 1.0,
+        "colsample_bytree": 1.0
+    }
+}
