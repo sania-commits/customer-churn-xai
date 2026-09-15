@@ -9,3 +9,5 @@ joblib==1.6.0
 fastapi==0.141.1
 uvicorn==0.53.0
 pydantic==2.13.5
+streamlit==1.63.0
+requests==2.34.2
