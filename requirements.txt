@@ -6,3 +6,6 @@ jupyter==1.1.1
 xgboost==3.4.1
 shap==0.52.0
 joblib==1.6.0
+fastapi==0.141.1
+uvicorn==0.53.0
+pydantic==2.13.5
