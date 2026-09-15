@@ -85,3 +85,27 @@ def test_missing_required_feature():
     )
 
     assert response.status_code == 422
+
+
+def test_internal_prediction_error(monkeypatch):
+    from src import api
+
+    def mock_predict_proba(_):
+        raise RuntimeError("Simulated model failure")
+
+    monkeypatch.setattr(
+        api.model,
+        "predict_proba",
+        mock_predict_proba,
+    )
+
+    response = client.post(
+        "/predict",
+        json=VALID_CUSTOMER,
+    )
+
+    assert response.status_code == 500
+    assert response.json() == {
+        "detail": "Prediction failed."
+    }
+
