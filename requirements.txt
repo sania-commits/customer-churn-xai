@@ -11,3 +11,5 @@ uvicorn==0.53.0
 pydantic==2.13.5
 streamlit==1.63.0
 requests==2.34.2
+pytest==9.1.1
+HTTPX== 0.28.1
