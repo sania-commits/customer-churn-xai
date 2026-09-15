@@ -30,6 +30,7 @@ logs/
 # Model artifacts
 *.pkl
 *.joblib
+!models/churn_model.joblib
 
 # Testing / coverage
 .pytest_cache/
