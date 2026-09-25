@@ -9,7 +9,7 @@ import streamlit as st
 # CONFIGURATION
 # ==================================================
 
-API_URL = "http://127.0.0.1:8000/predict"
+API_URL = "https://customer-churn-xai.onrender.com/predict"
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 
@@ -234,7 +234,7 @@ if submitted:
         response = requests.post(
             API_URL,
             json=customer_data,
-            timeout=10,
+            timeout=90,
         )
 
         response.raise_for_status()
